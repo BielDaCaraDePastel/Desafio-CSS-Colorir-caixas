@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 10px;
+  background: #0d1b2a;
+}
+
+/* grade 4 x 2 */
+.grade {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quadrado {
+  display: flex;
+  width: calc(25% - 6px);
+  height: 140px;
+  box-sizing: border-box;
+  padding: 8px;
+  background: #14304a;
+  border: 1px solid #1d4468;
+  border-radius: 8px;
+}
+
+/* caixinhas */
+.caixa {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.c1 { background: #8ecbff; }
+.c2 { background: #55a8f0; }
+.c3 { background: #3584d0; }
+.c4 { background: #2563a8; }
+
+/* 1: linha no canto, com espaço */
+.q1 {
+  gap: 6px;
+}
+
+/* 2: coluna invertida, colada, à esquerda */
+.q2 {
+  flex-direction: column-reverse;
+}
+
+/* 3: coluna centralizada na horizontal, com espaço */
+.q3 {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 4: linha centralizada nos dois eixos */
+.q4 {
+  justify-content: center;
+  align-items: center;
+}
+
+/* 5: linha no canto inferior direito */
+.q5 {
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+/* 6: linha com a segunda caixa crescendo */
+.q6 {
+  gap: 2px;
+}
+.q6 .c2 {
+  flex-grow: 3;
+}
+
+/* 7: linha com a terceira caixa branca */
+.q7 {
+  gap: 2px;
+}
+.q7 .c3 {
+  background: #ffffff;
+}
+
+/* 8: caixas grandes em 2 x 2 */
+.q8 {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+}
+.q8 .caixa {
+  flex: 0 0 45%;
+  height: 44px;
+}
